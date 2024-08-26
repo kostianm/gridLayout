@@ -2,6 +2,9 @@
     font-family: Inter;
 }
 
+button {
+    cursor: pointer;
+}
 
 a {
     text-decoration: none;
@@ -47,6 +50,17 @@ a {
         color: #794CFF;
         font-weight: 500;
        
+}
+
+.burger-menu {
+    display: none;
+}
+
+.burger-menu>div {
+    width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
 }
 
 .first {
@@ -205,6 +219,7 @@ gap: 80px;
 
 .fourth-img {
     flex: 1 0 596px;
+    max-width: fit-content;
 }
 
 .fourth-about {
@@ -352,4 +367,55 @@ border-bottom: 1px solid #FFF;
 
 .footer-bottom p {
     color: #D9DBE1;
+}
+
+@media screen and (max-width: 450px) {
+    .links, .logIn, .promotion, .footer-top li {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .try {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .second, .threeth-content {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .fourth {
+        flex-wrap: wrap;
+        padding: 8px;
+    }
+
+    .fourth-img {
+        order: -1;
+    }
+
+    .employees {
+        flex-direction: column;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .app-links {
+        justify-content: center;
+    }
+
+    .employees>p {
+        text-align: center;
+    }
+
+    .reviews:nth-child(n+1) {
+        display: none;
+    }
+
+    .footer-bottom {
+        padding: 4px;
+    }
 }
